@@ -206,11 +206,10 @@ public class NameSpaceRule extends AbstractRule {
 			ITypeBinding resolveTypeBinding = node.resolveTypeBinding();
 			String name = "";
 			if (resolveTypeBinding != null) {
-				resolveTypeBinding.getName();
 				name = resolveTypeBinding.getBinaryName();
-//				name = (name != null)
-//						? name
-//						: "";
+				name = (name != null)
+						? name
+						: "";
 			}
 			if (targetPackage.matcher(name).matches()) {
 				addProblem(node, errorMsg);
