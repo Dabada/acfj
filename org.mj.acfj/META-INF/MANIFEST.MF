@@ -30,10 +30,10 @@ Export-Package: org.mj.acfj;
    org.eclipse.core.resources,
    org.eclipse.jface.action,
    org.eclipse.ui",
- org.mj.acfj.rule;
-  uses:="org.eclipse.jdt.core,
+ org.mj.acfj.rule;uses:="org.mj.acfj.rule.impl,org.eclipse.core.resources",
+ org.mj.acfj.rule.impl;
+  uses:="org.mj.acfj.rule,
    org.eclipse.jdt.core.dom,
-   org.mj.acfj.rule.impl,
-   org.eclipse.core.resources",
- org.mj.acfj.rule.impl;uses:="org.mj.acfj.rule,org.eclipse.jdt.core.dom,org.eclipse.jdt.core.compiler"
+   org.mj.acfj,
+   org.eclipse.jdt.core.compiler"
 Bundle-ActivationPolicy: lazy
