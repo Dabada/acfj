@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?metadataRepository class='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'?>
-<repository name='file:/Users/bipbip/Documents/workspace/UpdateSite/ - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+<repository name='file:/Users/bipbip/Documents/workspace/UpdateSite/ - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
   <properties size='2'>
     <property name='p2.compressed' value='false'/>
-    <property name='p2.timestamp' value='1228077716409'/>
+    <property name='p2.timestamp' value='1228078893129'/>
   </properties>
   <units size='8'>
     <unit id='config.a.jre' version='1.6.0' singleton='false'>
@@ -57,7 +57,7 @@
       <touchpointData size='1'>
         <instructions size='1'>
           <instruction key='manifest'>
-            Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Bundle-Name: Architecture Compliance For Java Plug-in&#xA;Bundle-Activator: org.mj.acfj.Activator&#xA;Manifest-Version: 1.0&#xA;Bundle-Vendor: Mounir Jarra√Ø&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-SymbolicName: org.mj.acfj;singleton:=true&#xA;Bundle-ManifestVersion: 2&#xA;Eclipse-LazyStart: true&#xA;Bundle-Version: 1.0.0&#xA;Bundle-Localization: plugin&#xA;Export-Package: org.mj.acfj; uses:=&quot;org.eclipse.jdt.core,  org.osgi.framework,  org.eclipse.jdt.core.compiler,  org.eclipse.ui.plugin,  org.eclipse.core.runtime,  org.eclipse.ui&quot;,org.mj.acfj.builder; uses:=&quot;org.xml.sax,  org.mj.acfj.rule.impl,  org.mj.acfj,  org.eclipse.core.resources,  org.eclipse.core.runtime&quot;,org.mj.acfj.nature; uses:=&quot;org.eclipse.jface.viewers,  org.eclipse.core.resources,  org.eclipse.jface.action,  org.eclipse.ui&quot;,org.mj.acfj.rule;uses:=&quot;org.mj.acfj.rule.impl,org.eclipse.core.resources&quot;,org.mj.acfj.rule.impl; uses:=&quot;org.mj.acfj.rule,  org.eclipse.jdt.core.dom,  org.mj.acfj,  org.eclipse.jdt.core.compiler&quot;&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.jdt.core,org.eclipse.core.resources&#xA;
+            Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Bundle-Name: Architecture Compliance For Java Plug-in&#xA;Bundle-Activator: org.mj.acfj.Activator&#xA;Manifest-Version: 1.0&#xA;Bundle-Vendor: Mounir Jarra√Ø&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-SymbolicName: org.mj.acfj;singleton:=true&#xA;Bundle-ManifestVersion: 2&#xA;Eclipse-LazyStart: true&#xA;Bundle-Version: 1.0.0&#xA;Bundle-Localization: plugin&#xA;Export-Package: org.mj.acfj; uses:=&quot;org.eclipse.jdt.core,  org.osgi.framework,  org.eclipse.jdt.core.compiler,  org.eclipse.ui.plugin,  org.eclipse.core.runtime,  org.eclipse.ui&quot;,org.mj.acfj.builder; uses:=&quot;org.xml.sax,  org.mj.acfj.rule.impl,  org.mj.acfj,  org.eclipse.core.resources,  org.eclipse.core.runtime&quot;,org.mj.acfj.nature; uses:=&quot;org.eclipse.jface.viewers,  org.eclipse.core.resources,  org.eclipse.jface.action,  org.eclipse.ui&quot;,org.mj.acfj.rule;uses:=&quot;org.mj.acfj.rule.impl,org.eclipse.core.resources&quot;,org.mj.acfj.rule.impl; uses:=&quot;org.mj.acfj.rule,  org.eclipse.jdt.core.dom,  org.mj.acfj,  org.eclipse.jdt.core.compiler&quot;&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.jdt.core,org.eclipse.core.resources
           </instruction>
         </instructions>
       </touchpointData>
