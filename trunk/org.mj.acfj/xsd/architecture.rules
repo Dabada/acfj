@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.mj.org/acfj/rules">
+ 
+	<templateMessages>
+		<message id="0"><![CDATA[ACFJ: Using elements from [{1}] within [{0}] package is forbidden !]]></message>
+		<message id="1"><![CDATA[Message 1]]></message>
+		<message id="2"><![CDATA[Message 2 ={1}]]></message>
+		<message id="3"><![CDATA[Message 3 ={0}]]></message>
+	</templateMessages>
+
+	<nameSpace>
+		<current><![CDATA[org\.mj\..*]]></current>
+		<targets>
+			<avoid enabled="true"> 
+				<target><![CDATA[java\.util\.\w*]]></target>
+				<messageRef ref="0" />
+			</avoid>
+			<avoid enabled="true">
+				<target><![CDATA[java\.io\.\w*]]></target>
+				<messageRef ref="0"/>
+			</avoid>
+			<avoid enabled="true">
+				<target><![CDATA[java\.nio\.\w*]]></target>
+				<messageRef ref="3"></messageRef>
+			</avoid>
+			<avoid enabled="true">
+				<target><![CDATA[java.awt.*]]></target> 
+				<messageRef ref="1" />
+			</avoid>
+			<avoid enabled="true">
+				<target><![CDATA[org.omg.*]]></target>
+				<messageRef ref="3" /> 
+			</avoid>
+		</targets>
+	</nameSpace>
+
+	<nameSpace enabled="true">
+		<current><![CDATA[org\.mj\.portfolio\.gui]]></current>
+		<targets>
+			<avoid enabled="true">
+				<target><![CDATA[.*\.model\.\w*]]></target>
+				<messageRef ref="0" />
+			</avoid>
+
+		</targets>
+	</nameSpace>
+
+</tns:rules>

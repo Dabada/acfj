@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+	<extension point="org.eclipse.ui.startup">
+		<startup class="org.mj.acfj.Startup" />
+	</extension>
+
+	<extension id="org.mj.acfj.ruleProblem" name="Architectural Rule&apos;s Definition Problem" point="org.eclipse.core.resources.markers">
+		<super type="org.eclipse.core.resources.problemmarker" />
+		<super type="org.eclipse.core.resources.textmarker" />
+		<persistent value="true">
+		</persistent>
+	</extension>
+
+	<extension id="org.mj.acfj.ArchitectureProblem" name="Architecture Problem" point="org.eclipse.core.resources.markers">
+		<super type="org.eclipse.core.resources.problemmarker" />
+		<super type="org.eclipse.core.resources.textmarker" />
+		<persistent value="true" />
+	</extension>
+
+	<extension point="org.eclipse.jdt.core.compilationParticipant">
+		<compilationParticipant class="org.mj.acfj.ACFJCompilationParticipant" id="org.mj.acfj.ACFJCompilationParticipant"
+			createsProblems="true"
+		>
+			<managedMarker markerType="org.mj.acfj.ArchitectureProblem" />
+			<managedMarker markerType="org.eclipse.core.resources.problemmarker" />
+		</compilationParticipant>
+	</extension>
+
+	<extension point="org.eclipse.core.contenttype.contentTypes">
+		<file-association content-type="org.eclipse.core.runtime.xml" file-names="architecture.rules" />
+	</extension>
+
+	<extension id="org.mj.acfj.builder" name="Architecture Compliance For Java Rules builder" point="org.eclipse.core.resources.builders">
+		<builder callOnEmptyDelta="false" hasNature="true" isConfigurable="false">
+			<run class="org.mj.acfj.builder.XMLRulesBuilder" />
+			
+		</builder>
+		
+	</extension>
+
+	<extension id="org.mj.acfj.nature" name="Architecture Compliance For Java Nature" point="org.eclipse.core.resources.natures">
+		<runtime>
+			<run class="org.mj.acfj.nature.ACFJNature" />
+		</runtime>
+		<builder id="org.mj.acfj.builder">
+		</builder>
+	</extension>
+
+	<extension point="org.eclipse.ui.popupMenus">
+		<objectContribution adaptable="true" id="org.mj.acfj.contribution1" nameFilter="*" objectClass="org.eclipse.core.resources.IProject">
+			<action class="org.mj.acfj.nature.ToggleNatureAction" enablesFor="+" id="org.mj.acfj.addRemoveNatureAction" label="Add/Remove ACFJ Nature"
+				menubarPath="additions"
+			>
+			</action>
+		</objectContribution>
+	</extension>
+
+</plugin>
