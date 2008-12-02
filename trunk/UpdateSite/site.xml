@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.mj.acfj_1.0.0.jar" id="org.mj.acfj" version="1.0.0">
+   <feature url="features/org.mj.acfj_1.0.1.jar" id="org.mj.acfj" version="1.0.1">
       <category name="Architecture Compliance For Java"/>
    </feature>
    <category-def name="Architecture Compliance For Java" label="Architecture Compliance For Java"/>
