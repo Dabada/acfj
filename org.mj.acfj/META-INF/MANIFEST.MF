@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Architecture Compliance For Java Plug-in
 Bundle-SymbolicName: org.mj.acfj;singleton:=true
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.1
 Bundle-Activator: org.mj.acfj.Activator
 Bundle-Localization: plugin
 Bundle-Vendor: Mounir Jarraï

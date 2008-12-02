@@ -165,7 +165,9 @@ public class XMLRulesBuilder extends IncrementalProjectBuilder implements ACFJCo
 						break;
 					}
 				} catch (Exception e) {
-					throw new CoreException(new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getLocalizedMessage(), e));
+					Status status = new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getLocalizedMessage(), e);
+					LOGGER.log(status);
+					throw new CoreException(status);
 				}
 			}
 
@@ -188,7 +190,9 @@ public class XMLRulesBuilder extends IncrementalProjectBuilder implements ACFJCo
 					IFile file = (IFile) resource;
 					checkXML(file);
 				} catch (Exception e) {
-					throw new CoreException(new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getLocalizedMessage(), e));
+					Status status = new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getLocalizedMessage(), e);
+					LOGGER.log(status);
+					throw new CoreException(status);
 				}
 			}
 			//return true to continue visiting children.
@@ -221,6 +225,8 @@ public class XMLRulesBuilder extends IncrementalProjectBuilder implements ACFJCo
 		try {
 			getProject().accept(new ResourceVisitor());
 		} catch (CoreException e) {
+			LOGGER.log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getLocalizedMessage(), e));
+			throw e;
 		}
 	}
 
@@ -231,6 +237,11 @@ public class XMLRulesBuilder extends IncrementalProjectBuilder implements ACFJCo
 	 */
 	protected void incrementalBuild(IResourceDelta delta, IProgressMonitor monitor) throws CoreException {
 		// the visitor does the work.
-		delta.accept(new DeltaVisitor());
+		try {
+			delta.accept(new DeltaVisitor());
+		} catch (CoreException e) {
+			LOGGER.log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getLocalizedMessage(), e));
+			throw e;
+		}
 	}
 }

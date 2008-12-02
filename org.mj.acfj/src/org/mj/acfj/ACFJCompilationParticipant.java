@@ -87,10 +87,10 @@ public class ACFJCompilationParticipant extends CompilationParticipant {
 			}
 			IJavaProject javaProject = ast.getTypeRoot().getJavaProject();
 			IProject project = javaProject.getProject();
-			
-//			List<CategorizedProblem> problems = scanForUnsatisfiedRules(project, ast);
-//			context.putProblems(ACFJConstants.ARCHITECTURE_MARKER_TYPE_PROBLEM, problems.toArray(new CategorizedProblem[problems.size()]));
-			
+
+			//			List<CategorizedProblem> problems = scanForUnsatisfiedRules(project, ast);
+			//			context.putProblems(ACFJConstants.ARCHITECTURE_MARKER_TYPE_PROBLEM, problems.toArray(new CategorizedProblem[problems.size()]));
+
 		} catch (JavaModelException e) {
 			LOGGER.log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getLocalizedMessage(), e));
 		}
@@ -131,7 +131,7 @@ public class ACFJCompilationParticipant extends CompilationParticipant {
 		CompilationUnit ast = (CompilationUnit) parser.createAST(new NullProgressMonitor());
 		return ast;
 	}
-	
+
 	/**
 	 * @param project
 	 * @param ast
@@ -160,6 +160,7 @@ public class ACFJCompilationParticipant extends CompilationParticipant {
 		boolean active = false;
 		IProject project = javaProject.getProject();
 		String[] natureIds = null;
+
 		try {
 			natureIds = project.getDescription().getNatureIds();
 			for (int i = 0; i < natureIds.length; i++) {
@@ -173,7 +174,11 @@ public class ACFJCompilationParticipant extends CompilationParticipant {
 			active = false;
 		}
 
-		LOGGER.log(new Status(IStatus.INFO, Activator.PLUGIN_ID, "isActive on " + javaProject.getElementName() + " = " + active));
+		LOGGER.log(new Status(IStatus.INFO, Activator.PLUGIN_ID, "ACFJ isActive on " + javaProject.getElementName() + " = " + active));
+		if (active) {
+			MetaRule projectMetaRule = RuleRegistry.getSingleton().getProjectMetaRule(project);
+			LOGGER.log(new Status(IStatus.INFO, Activator.PLUGIN_ID, "ACFJ : found " + projectMetaRule.size() + " active Rules"));
+		}
 		return active;
 	}
 
