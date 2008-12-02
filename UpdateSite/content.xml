@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?metadataRepository class='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'?>
-<repository name='file:/Users/bipbip/Documents/workspace/UpdateSite/ - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+<repository name='file:/Users/bipbip/Documents/workspace/UpdateSite/ - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
   <properties size='2'>
     <property name='p2.compressed' value='false'/>
-    <property name='p2.timestamp' value='1228162764408'/>
+    <property name='p2.timestamp' value='1228196252246'/>
   </properties>
-  <units size='10'>
+  <units size='13'>
     <unit id='org.mj.acfj.feature.group' version='1.0.0' singleton='false'>
       <update id='org.mj.acfj.feature.group' range='[0.0.0,1.0.0)' severity='0'/>
       <properties size='5'>
@@ -91,7 +91,7 @@
       <touchpointData size='1'>
         <instructions size='1'>
           <instruction key='manifest'>
-            Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Bundle-Name: Architecture Compliance For Java Plug-in&#xA;Bundle-Activator: org.mj.acfj.Activator&#xA;Manifest-Version: 1.0&#xA;Bundle-Vendor: Mounir Jarra√Ø&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-SymbolicName: org.mj.acfj;singleton:=true&#xA;Bundle-ManifestVersion: 2&#xA;Eclipse-LazyStart: true&#xA;Bundle-Version: 1.0.0&#xA;Bundle-Localization: plugin&#xA;Export-Package: org.mj.acfj; uses:=&quot;org.eclipse.jdt.core,  org.osgi.framework,  org.eclipse.jdt.core.compiler,  org.eclipse.ui.plugin,  org.eclipse.core.runtime,  org.eclipse.ui&quot;,org.mj.acfj.builder; uses:=&quot;org.xml.sax,  org.mj.acfj.rule.impl,  org.mj.acfj,  org.eclipse.core.resources,  org.eclipse.core.runtime&quot;,org.mj.acfj.nature; uses:=&quot;org.eclipse.jface.viewers,  org.eclipse.core.resources,  org.eclipse.jface.action,  org.eclipse.ui&quot;,org.mj.acfj.rule;uses:=&quot;org.mj.acfj.rule.impl,org.eclipse.core.resources&quot;,org.mj.acfj.rule.impl; uses:=&quot;org.mj.acfj.rule,  org.eclipse.jdt.core.dom,  org.mj.acfj,  org.eclipse.jdt.core.compiler&quot;&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.jdt.core,org.eclipse.core.resources&#xA;
+            Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Bundle-Name: Architecture Compliance For Java Plug-in&#xA;Bundle-Activator: org.mj.acfj.Activator&#xA;Manifest-Version: 1.0&#xA;Bundle-Vendor: Mounir Jarra√Ø&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-SymbolicName: org.mj.acfj;singleton:=true&#xA;Bundle-ManifestVersion: 2&#xA;Eclipse-LazyStart: true&#xA;Bundle-Version: 1.0.0&#xA;Bundle-Localization: plugin&#xA;Export-Package: org.mj.acfj; uses:=&quot;org.eclipse.jdt.core,  org.osgi.framework,  org.eclipse.jdt.core.compiler,  org.eclipse.ui.plugin,  org.eclipse.core.runtime,  org.eclipse.ui&quot;,org.mj.acfj.builder; uses:=&quot;org.xml.sax,  org.mj.acfj.rule.impl,  org.mj.acfj,  org.eclipse.core.resources,  org.eclipse.core.runtime&quot;,org.mj.acfj.nature; uses:=&quot;org.eclipse.jface.viewers,  org.eclipse.core.resources,  org.eclipse.jface.action,  org.eclipse.ui&quot;,org.mj.acfj.rule;uses:=&quot;org.mj.acfj.rule.impl,org.eclipse.core.resources&quot;,org.mj.acfj.rule.impl; uses:=&quot;org.mj.acfj.rule,  org.eclipse.jdt.core.dom,  org.mj.acfj,  org.eclipse.jdt.core.compiler&quot;&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.jdt.core,org.eclipse.core.resources
           </instruction>
         </instructions>
       </touchpointData>
@@ -407,6 +407,110 @@
           </instruction>
           <instruction key='install'>
             installFeature(feature:${artifact},featureId:default,featureVersion:default)
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mj.acfj.feature.jar' version='1.0.1'>
+      <update id='org.mj.acfj.feature.jar' range='[0.0.0,1.0.1)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='Architecture Compliance For Java Feature'/>
+        <property name='org.eclipse.equinox.p2.description' value='Architecture Compliance For Java'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://code.google.com/p/acfj/'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mounir Jarraï'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mj.acfj.feature.jar' version='1.0.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mj.acfj' version='1.0.1'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mj.acfj' version='1.0.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+          Copyright (c) 2008, Mounir Jarraï&#xA; All rights reserved.&#xA;&#xA; Redistribution and use in source and binary forms, with or without&#xA; modification, are permitted provided that the following conditions are met:&#xA;    1. Redistributions of source code must retain the above copyright&#xA;       notice, this list of conditions and the following disclaimer.&#xA;    2. Redistributions in binary form must reproduce the above copyright&#xA;       notice, this list of conditions and the following disclaimer in the&#xA;       documentation and/or other materials provided with the distribution.&#xA;    3. All advertising materials mentioning features or use of this software&#xA;       must display the following acknowledgement:&#xA;   This product includes software developed by Mounir Jarraï&#xA;       and its contributors.&#xA;    4. Neither the name Mounir Jarraï nor the names of its contributors may &#xA;       be used to endorse or promote products derived from this software &#xA;       without specific prior written permission.&#xA;&#xA; THIS SOFTWARE IS PROVIDED BY MOUNIR JARRAÏ ``AS IS&amp;apos;&amp;apos; AND ANY&#xA; EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED&#xA; WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE&#xA; DISCLAIMED. IN NO EVENT SHALL MOUNIR JARRAÏ BE LIABLE FOR ANY&#xA; DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES&#xA; (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;&#xA; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND&#xA; ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT&#xA; (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS&#xA; SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        </license>
+      </licenses>
+      <copyright>
+        Copyright (c) 2008, Mounir Jarraï&#xA; All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='org.mj.acfj.feature.group' version='1.0.1' singleton='false'>
+      <update id='org.mj.acfj.feature.group' range='[0.0.0,1.0.1)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Architecture Compliance For Java Feature'/>
+        <property name='org.eclipse.equinox.p2.description' value='Architecture Compliance For Java'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://code.google.com/p/acfj/'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mounir Jarraï'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mj.acfj.feature.group' version='1.0.1'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mj.acfj' range='[1.0.1,1.0.1]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mj.acfj.feature.jar' range='[1.0.1,1.0.1]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+          Copyright (c) 2008, Mounir Jarraï&#xA; All rights reserved.&#xA;&#xA; Redistribution and use in source and binary forms, with or without&#xA; modification, are permitted provided that the following conditions are met:&#xA;    1. Redistributions of source code must retain the above copyright&#xA;       notice, this list of conditions and the following disclaimer.&#xA;    2. Redistributions in binary form must reproduce the above copyright&#xA;       notice, this list of conditions and the following disclaimer in the&#xA;       documentation and/or other materials provided with the distribution.&#xA;    3. All advertising materials mentioning features or use of this software&#xA;       must display the following acknowledgement:&#xA;   This product includes software developed by Mounir Jarraï&#xA;       and its contributors.&#xA;    4. Neither the name Mounir Jarraï nor the names of its contributors may &#xA;       be used to endorse or promote products derived from this software &#xA;       without specific prior written permission.&#xA;&#xA; THIS SOFTWARE IS PROVIDED BY MOUNIR JARRAÏ ``AS IS&amp;apos;&amp;apos; AND ANY&#xA; EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED&#xA; WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE&#xA; DISCLAIMED. IN NO EVENT SHALL MOUNIR JARRAÏ BE LIABLE FOR ANY&#xA; DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES&#xA; (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;&#xA; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND&#xA; ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT&#xA; (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS&#xA; SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        </license>
+      </licenses>
+      <copyright>
+        Copyright (c) 2008, Mounir Jarraï&#xA; All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='org.mj.acfj' version='1.0.1'>
+      <update id='org.mj.acfj' range='[0.0.0,1.0.1)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Architecture Compliance For Java Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mounir Jarra√Ø'/>
+      </properties>
+      <provides size='8'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mj.acfj' version='1.0.1'/>
+        <provided namespace='osgi.bundle' name='org.mj.acfj' version='1.0.1'/>
+        <provided namespace='java.package' name='org.mj.acfj' version='0.0.0'/>
+        <provided namespace='java.package' name='org.mj.acfj.builder' version='0.0.0'/>
+        <provided namespace='java.package' name='org.mj.acfj.nature' version='0.0.0'/>
+        <provided namespace='java.package' name='org.mj.acfj.rule' version='0.0.0'/>
+        <provided namespace='java.package' name='org.mj.acfj.rule.impl' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mj.acfj' version='1.0.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-RequiredExecutionEnvironment: J2SE-1.5&#xA;Bundle-Name: Architecture Compliance For Java Plug-in&#xA;Bundle-Activator: org.mj.acfj.Activator&#xA;Manifest-Version: 1.0&#xA;Bundle-Vendor: Mounir Jarra√Ø&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-SymbolicName: org.mj.acfj;singleton:=true&#xA;Bundle-ManifestVersion: 2&#xA;Eclipse-LazyStart: true&#xA;Bundle-Version: 1.0.1&#xA;Bundle-Localization: plugin&#xA;Export-Package: org.mj.acfj; uses:=&quot;org.eclipse.jdt.core,  org.osgi.framework,  org.eclipse.jdt.core.compiler,  org.eclipse.ui.plugin,  org.eclipse.core.runtime,  org.eclipse.ui&quot;,org.mj.acfj.builder; uses:=&quot;org.xml.sax,  org.mj.acfj.rule.impl,  org.mj.acfj,  org.eclipse.core.resources,  org.eclipse.core.runtime&quot;,org.mj.acfj.nature; uses:=&quot;org.eclipse.jface.viewers,  org.eclipse.core.resources,  org.eclipse.jface.action,  org.eclipse.ui&quot;,org.mj.acfj.rule;uses:=&quot;org.mj.acfj.rule.impl,org.eclipse.core.resources&quot;,org.mj.acfj.rule.impl; uses:=&quot;org.mj.acfj.rule,  org.eclipse.jdt.core.dom,  org.mj.acfj,  org.eclipse.jdt.core.compiler&quot;&#xA;Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.jdt.core,org.eclipse.core.resources&#xA;
           </instruction>
         </instructions>
       </touchpointData>
